@@ -1,0 +1,30 @@
+<%- include("./partials/header") %>
+
+    <h1>Index</h1>
+
+    <section class="indexGallery">
+
+        <% shopData.forEach(item=> { %>
+            <figure>
+                <a href="#">
+                    <img src=<%=item.productImgUrl%> alt="">
+                </a>
+                <div class="namePrice">
+                    <p>
+                        <%=item.productName%>
+                    </p>
+                    <p>
+                        <%=item.price%>,00$
+                    </p>
+                </div>
+                <p>
+                    <%=item.company%>
+                </p>
+            </figure>
+
+            <%})%>
+
+    </section>
+
+
+    <%- include("./partials/footer") %>
