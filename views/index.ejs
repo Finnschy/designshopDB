@@ -1,12 +1,10 @@
 <%- include("./partials/header") %>
 
-    <h1>Index</h1>
-
     <section class="indexGallery">
 
         <% shopData.forEach(item=> { %>
             <figure>
-                <a href="#">
+                <a href="/single/<%=item.id%>">
                     <img src=<%=item.productImgUrl%> alt="">
                 </a>
                 <div class="namePrice">

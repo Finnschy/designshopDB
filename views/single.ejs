@@ -1,0 +1,25 @@
+<%- include("./partials/header") %>
+
+    <figure>
+        <a href="/single/<%=singleItem.id%>">
+            <img src=<%=singleItem.productImgUrl%> alt="">
+        </a>
+        <div class="namePrice">
+            <p>
+                <%=singleItem.productName%>
+            </p>
+            <p>
+                <%=singleItem.price%>,00$
+            </p>
+        </div>
+        <p>
+            <%=singleItem.company%>
+        </p>
+    </figure>
+
+    <section class="singleDescription">
+        <h3>Product description</h3>
+        <p></p>
+    </section>
+
+<%- include("./partials/footer") %>

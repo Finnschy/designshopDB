@@ -31,6 +31,14 @@ app.get("/add", (req, res) => {
     res.render("add")
 })
 
+app.get("/weeklyrecommendations", (req, res) => {
+    res.render("weeklyRecom")
+})
+
+app.get("/lessthan30", (req, res) => {
+    res.render("less30")
+})
+
 app.post("/add-item", (req, res) => {
     console.log(req.body);
     
@@ -49,3 +57,12 @@ app.post("/add-item", (req, res) => {
     .catch(err => console.log(err))
 })
 
+app.get("/single/:singleId", (req, res) => {
+    console.log(req.params.singleId);
+    shopItem.findById(req.params.singleId)
+        .then(result => {
+            // res.send(result)
+            res.render("single", { singleItem: result })
+        })
+        .catch(err => console.log(err))
+})
