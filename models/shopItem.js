@@ -25,7 +25,7 @@ const shopItemSchema = new Schema({
     },
     description: {
         type: String,
-        required: false
+        required: true
     }
 
 }, {timestamps: true})

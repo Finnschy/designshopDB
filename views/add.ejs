@@ -13,5 +13,28 @@
             <input type="submit" value="Add Item">
         </form>
     </section>
+    <h1 class="randomHL">RANDOM PRODUCTS</h1>
+    <section class="randomProducts"> 
+        
+        <% randomData.forEach(randomItem=> { %>
+            <figure>
+                <a href="/single/<%=randomItem.id%>">
+                    <img src=<%=randomItem.productImgUrl%> alt="">
+                </a>
+                <div class="namePrice">
+                    <p>
+                        <%=randomItem.productName%>
+                    </p>
+                    <p>
+                        <%=randomItem.price%>,00$
+                    </p>
+                </div>
+                <p>
+                    <%=randomItem.company%>
+                </p>
+            </figure>
+
+            <%})%>
+    </section>
 
     <%- include("./partials/footer") %>
